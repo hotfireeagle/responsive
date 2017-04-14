@@ -1,0 +1,91 @@
+@font-face{
+    font-family: fansong;
+    src: url("./fansong.ttf");
+}
+*{margin: 0px ; padding: 0px; font-family: fansong !important;}
+html,body{width: 100%; font-family: 'Sintony', sans-serif;}
+@media all and (max-width: 270px){
+    html,body{font-size: 10px;}
+    header{height: 50px;}
+    header h1>a{height: 50px; line-height: 50px;}
+    /*header h3{height: 50px;}*/
+    header h3>a{/*height: 50px; line-height: 50px;*/ font-size: 1rem;}
+    .btn{height: 50px;}
+    .webTitle{font-size: 1.8rem;}
+}
+@media all and (min-width: 270px) and (max-width: 512px){
+    html,body{font-size: 12px;}
+    header{height: 50px;}
+    header h1>a{height: 50px; line-height: 50px;}
+    /*header h3{height: 50px;}*/
+    header h3>a{/*height: 50px; line-height: 50px; */
+    font-size: 1.2rem;}
+    .btn{height: 50px;}
+    .webTitle{font-size: 1.8rem;}
+}
+@media all and (min-width: 512px){
+    html,body{font-size: 16px;}
+    header{height: 80px;}
+    header h1>a{height: 80px; line-height: 80px;}
+    header h3{height: 80px; line-height: 80px;}
+    header h3>a{height: 80px; font-size: 1.3rem;}
+    .btn{height: 80px;}
+    .webTitle{font-size: 2rem;}
+}
+li{list-style-type: none;}
+a{cursor: pointer;} a:hover{color: #ffffff;}
+header{width: 100%; border-bottom: 2px solid #000000;}
+header h1{background: #CA4D4D; text-align: center;}
+header h1>a{color: #ffffff;}
+header h3{background: #ffffff; text-align: center;}
+header h3>a{color: #586165; font-weight: bold;}
+header h3>a:hover{color: #CA4D4D;}
+.btn{position: relative;}
+.btn>img{position: absolute; top: 50%; transform: translateY(-50%); right: 5%;}
+@media all and (max-width: 512px){.banner{min-height: 300px; overflow: hidden;}}
+@media all and (min-width: 512px) and (max-width: 768px){.banner{min-height: 400px; overflow: hidden;}}
+@media all and (min-width: 768px) and (max-width: 1024px){.banner{min-height: 500px; overflow: hidden;}}
+@media all and (min-width: 1024px) and (max-width: 1280px){.banner{min-height: 600px; overflow: hidden;}}
+@media all and (min-width: 1280px){.banner{height: 730px;}}
+.banner{width: 100%; background: url("../img/banner.jpg") no-repeat 0px 0px; background-size: cover; text-align: center;}
+.banner::before{display: table; content:" ";}
+.banner::after{clear: both; display: table; content: " ";}
+.font{color: #fff; margin-left: auto; margin-right: auto;}
+@media all and (max-width: 380px){
+    .banner>h1{margin-top: 150px; width: 70%; padding: 0.7em 0.3em; font-size: 1rem;}
+    .banner>p{margin-top: 10px; width: 70%; padding: 0.7em 0.3em 0.7em 0; font-size: 1rem;}
+}
+@media all and (min-width: 380px){
+    .banner>h1{margin-top: 400px; margin-bottom: 10px; width: 70%; padding: 1.3em 0.4em; font-size: 1.15rem;}
+    .banner>p{margin-bottom: 10px; width: 70%; padding: 0.7em 0.4em 0.7em 0; font-size: 1.1rem;}
+}
+@media all and (min-width: 1280px){
+    .banner>h1{margin-top: 350px; width: 50%; padding: 2.5em 0.8em; font-size: 1.4rem;}
+    .banner>p{margin-top: 20px; width: 40%; padding: 2.5em 0.8em 2.5em 0; font-size: 1.2rem;}
+}
+.banner>h1{background: rgba(202, 77, 77, 0.61); line-height: 1.3em; text-align: center;}
+.banner>p{background: rgba(45,31,31,0.7); line-height: 1.3em; text-indent: 1.5em;}
+.intro{width: 100%; background:#F7F7F7;}
+.intro>h1{color: #CA4D4D; font-weight: bold;}
+.intro>p{color: #929da5;}
+@media all and (max-width: 700px){
+    .responsiveH1{font-size: 2.2rem; padding-top: 1em; margin-left: 10px;}
+    .responsiveP{margin-top: 15px; margin-left: 10px; font-size: 1rem; margin-right: 10px; line-height: 1.6em; padding-bottom: 3em;}
+}
+@media all and (min-width: 700px){
+    .intro{height: 300px; padding-left: 10%; padding-right: 10%;}
+    .responsiveH1{font-size: 2.35rem; padding-top: 1em; float: left;}
+    .responsiveP{font-size: 1rem; line-height: 2.0em; float: left; margin-top: 2.8em; padding-bottom: 3em;}
+}
+@media all and (min-width: 700px) and (max-width: 860px){
+    .intro2{height: 200px; padding-left: 10%; padding-right: 10%;}
+    .intro2>h1{font-size: 2.35rem; padding-top: 0.5em; float: left;}
+    .intro2>p{font-size: 1rem; line-height: 2.0em; float: left; margin-top: 1.5em; padding-bottom: 3em;}
+}
+.topModel{width: 100%; background: #fff;}
+.intro2{background: #fff; height: 200px;}
+.intro2>p{color: #000;}
+.gallery{width: 100%; background-color: #233;}
+.gallery img{width: 100%;}
+footer{width: 100%; height: 50px; line-height: 50px; background-color: #242A2C; text-align: center;}
+footer>font{line-height: 50px; color: #7E7E7E;}

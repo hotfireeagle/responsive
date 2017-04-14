@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang = "zh">
+    <head>
+        <title>TUTELAGE</title>
+        <meta charset = "utf-8" />
+        <meta name = "keywords" content = "test web" />
+        <meta name = "description" content = "for test" />
+        <meta name = "robots" content = "all" />
+        <meta name = "author" content = "hahahia" />
+        <meta name = "viewport" content = "width=device-width,initial-scale=1" />
+        <link rel = "stylesheet" type = "text/css" href = "./css/index.css" />
+        <script type = "text/javascript">
+            var buttonStatus = false;
+            var innerWidth = window.innerWidth;
+            var inputEle_width = innerWidth * 0.35 + 50 + "px";
+            var inputEle = document.createElement("input");
+
+            function addOnload(fun){
+                var oldOnload = window.onload;
+                if(Object.prototype.toString.call(oldOnload) != "[object Function]"){
+                    window.onload = fun;
+                }else{
+                    window.onload = function(){oldOnload();fun();}
+                }
+            }
+
+            function createSearch(){
+                buttonStatus = true;
+                inputEle.id = "inputChild";
+                inputEle.style.transition = "left 0.35s linear , width 0.35s linear";
+                inputEle.style.boxSizing = "border-box";
+                inputEle.style.border = "0px";
+                inputEle.style.height = "40px";
+                inputEle.style.width = "0px";
+                inputEle.style.position = "absolute";
+                inputEle.style.top = "50%";
+                inputEle.style.transform = "translateY(-50%)";
+                inputEle.style.left = "87%";
+                inputEle.style.backgroundColor = "#FC3A3A";
+                inputEle.style.borderRadius = "20px 20px";
+                setTimeout(()=>{inputEle.style.left = "50%";inputEle.style.width = inputEle_width;},10);
+                var topEle = document.getElementById("root");
+                topEle.appendChild(inputEle);
+            }
+
+            function hideSearch(){
+                var topEle = document.getElementById("root");
+                var inputEle = document.getElementById("inputChild");
+                inputEle.style.left = "87%";
+                inputEle.style.width = "0px";
+                buttonStatus = false;
+            }
+
+            function handleSearchClick(event){
+                if(!buttonStatus){createSearch();}
+                else if(buttonStatus){hideSearch();}
+            }
+
+            function changeContentProgress(){
+                
+            }
+
+            addOnload(changeContentProgress);
+        </script>
+    </head>
+    <body>
+        <header id = "root">
+            <ul class = "header_list">
+                <li class = "header_item"><a href = "#">TuteLage</a</li>
+                <li class = "header_item header_title"><a href = "#">Home</a></li>
+                <li class = "header_item header_title"><a href = "#">About</a></li>
+                <li class = "header_item header_title"><a href = "#">Service</a></li>
+                <li class = "header_item header_title"><a href = "#">About</a></li>
+                <li class = "header_item header_title"><a href = "#">Download</a></li>
+                <li class = "header_item header_title"><a href = "#">Contract</a></li>
+                <li class = "header_item header_title" id = "search_button" onclick = "handleSearchClick(this)"></li>
+            </ul>
+        </header>
+        <div class = "baner">
+            <p id = "content">Make A Huge Difference Start Your Career journey With Us
+            </p>
+            <ul class = "progressBar">
+                <li class = "progress" id = "progress1">
+                    <li class = "progress move_progress"></li>
+                </li>
+                <li class = "progress initColor" id = "progress2"></li>
+                <li class = "progress initColor" id = "progress3"></li>
+                <li class = "progress initColor" id = "progress4"></li>
+                <li class = "progress initColor" id = "progress5"></li>
+            </ul>
+        </div>
+        <div class = "intro">
+            <h2>Welcome to Tutelage</h2>
+            <ul class = "intro_list">
+                <li class = "intro_item">
+                    <h3>OUR INSTRUCTIONS</h3>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque explicabo.</p>
+                </li>
+                <li class = "intro_item">
+                    <h3>OUR SUPPORT</h3>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque explicabo.</p>
+                </li>
+                <li class = "intro_item">
+                    <h3>OUR GUARANTEE</h3>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque explicabo.</p>
+                </li>
+                <li class = "intro_item">
+                    <h3>OUR RELIABILITY</h3>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque explicabo.</p>
+                </li>
+            </ul>
+            <ul class = "icon_list">
+                <li class = "icon_item"></li>
+                <li class = "icon_item"></li>
+                <li class = "icon_item"></li>
+                <li class = "icon_item"></li>
+            </ul>
+        </div>
+        <div class = "teammate">
+            <h3>OUR TEACHERS</h3>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate.</p>
+            <ul class = "teammate_list">
+                <li>
+                    <div class = "teammate_img"></div>
+                    <h3>FEDERICA</h3>
+                    <h4>Co-founder</h4>
+                    <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus</p>
+                    <ul>
+                        <li><a href = "#"></a></li>
+                        <li><a href = "#"></a></li>
+                        <li><a href = "#"></a></li>
+                        <li><a href = "#"></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class = "teammate_img"></div>
+                    <h3>PATRICK</h3>
+                    <h4>Co-founder</h4>
+                    <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus</p>
+                    <ul>
+                        <li><a href = "#"></a></li>
+                        <li><a href = "#"></a></li>
+                        <li><a href = "#"></a></li>
+                        <li><a href = "#"></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class = "teammate_img"></div>
+                    <h3>THOMPSON</h3>
+                    <h4>Co-founder</h4>
+                    <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus</p>
+                    <ul>
+                        <li><a href = "#"></a></li>
+                        <li><a href = "#"></a></li>
+                        <li><a href = "#"></a></li>
+                        <li><a href = "#"></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class = "teammate_img"></div>
+                    <h3>VICTORIA</h3>
+                    <h4>Co-founder</h4>
+                    <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus</p>
+                    <ul>
+                        <li><a href = "#"></a></li>
+                        <li><a href = "#"></a></li>
+                        <li><a href = "#"></a></li>
+                        <li><a href = "#"></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class = "picture_wall">
+            <h3>FACILITIES</h3>
+            <div>
+                <ul>
+                    <li><img src = "./img/g1.jpg" width = "330px" height = "220px" alt = "picture1" /></li>
+                    <li><img src = "./img/g2.jpg" width = "330px" height = "220px" alt = "picture1" /></li>
+                    <li><img src = "./img/g3.jpg" width = "330px" height = "220px" alt = "picture1" /></li>
+                    <br/>
+                    <li><img src = "./img/g4.jpg" width = "330px" height = "220px" alt = "picture1" /></li>
+                    <li><img src = "./img/g5.jpg" width = "330px" height = "220px" alt = "picture1" /></li>
+                    <li><img src = "./img/g6.jpg" width = "330px" height = "220px" alt = "picture1" /></li>
+                </ul>
+            </div>
+        </div>
+        <div class = "feature_div">
+            <h3>Feature</h3>
+            <ul>
+                <li><img width = "445px" height = "296px" alt = "f1" src = "./img/f1.jpg"/></li>
+                <li>
+                    <h4>SPECIAL CARE ON STUDENTS</h4>
+                    <p> Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatu.Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatu.</p>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
