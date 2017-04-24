@@ -1,9 +1,5 @@
-@font-face{
-  font-family: fansong;
-  src: url("../fansong.ttf");
-}
 *{
-  font-family: fansong !important;
+  font-family: FangSong !important;
 }
 /* ======= Base ======= */
 body {
