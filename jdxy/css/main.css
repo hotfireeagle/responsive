@@ -1,0 +1,79 @@
+html,body{
+	background-color: #EDEDED;
+	font-family: "宋体", Arial, Tahoma,Verdana, Helvetica, sans-serif;
+}
+/*重置某些bootstrap的样式*/
+.container{width: 960px; padding-left: 0px; padding-right: 0px; background-color: #fff;}
+a{color: #000;}
+/**/
+.tubiao{height: 23.63636363px !important;}
+.top-logo{background-color: #fff;}
+.nav-color{background-color: #0285CA; margin-bottom: 0px !important;}
+.nav-color a{color: #fff !important;}
+.navbar-default ul{background-color: #0285CA !important;}
+.jyRow{margin-left: 0px; margin-right: 0px;}
+.jyRow1{height: 300px;}
+.jyRow2{height: 200px;}
+.jyCol1{height: 300px;}
+.jyCol2{height: 200px;}
+.jyCol-fencai{height: 40px; background-color: #0285CA; line-height: 40px; color: #fff; font-size: 22px;}
+.jyCol-pic{height: 160px; text-align: center;}
+.col-gonggao{height: 23.63636363px; background-image:linear-gradient(to top,#DBEAF6,#F1F6FA);line-height: 23.63636363px; font-size: 13px;}
+.col-gonggaoHeader{height: 40px; background-image: none; background-color: #0285CA; color: #fff; font-size: 22px; line-height: 40px;} 
+.col-gonggaoFoot{text-align: right;}
+.col-sourceFoot{height: 19.63636363px; text-align: right;}
+.row-pic{padding-top: 20px !important;}
+.select-footer{height: 50px; background-color: #0285CA; margin-left: 0px; margin-right: 0px; margin-top: 15px; text-align: center;}
+.selectButton{
+	margin-top: 9px;
+}
+.footer{
+	clear: both;
+	background-color: #fff;
+	width: 100%;
+	margin-top: 20px;
+	margin-left: 0px; margin-right: 0px;
+	text-align: center;
+}
+/*下面的是PC端的样式*/
+@media screen and (min-width: 450px){
+	.app{
+		width: 960px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.top-logo{
+		width: 100%;
+		height: 110px;
+		position: relative;
+	}
+	.top-logo>img{
+		position: absolute;
+		top: 10px;
+		left: 150px;
+	}
+}
+
+/*下面的是移动端的样式效果*/
+@media screen and (max-width: 450px){
+	.app{
+		width: 100%;
+	}
+	.top-logo>img{
+		max-width: 100%;
+		height: auto;
+		position: static;
+	}
+	.row-pic{margin-left: 0px !important;}
+	.jyCol-pic{
+		margin-left: -5px;
+		padding: 0px;
+	}
+	.jyCol-pic img{
+		width: 120px;
+		height: 120px;
+	}
+	.jyCol-pic a{
+		display: none;
+	}
+}
